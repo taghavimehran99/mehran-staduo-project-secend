@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base custom styles to enhance mobile experience */
+* {
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-width: none; /* Hide scrollbars for slick app-like feel */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Hide scrollbars for WebKit browsers */
+}
+
+/* Custom bounce styling */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+/* Safe touch target assurance */
+.touch-target-safe {
+  min-height: 44px;
+  min-width: 44px;
+}
